@@ -1,3 +1,5 @@
+// use it like this:
+// curl -X POST -H "Content-Type: application/json" -H "token: supersecretpassword" -d '{"message":"teste"}' "http://localhost:5551/send-notification"
 package main
 
 import (
@@ -51,7 +53,7 @@ func init() {
 	Config["APP_PORT"] = 5551
 	Config["TG_CHAT_ID"] = ""   // your telegram chat id, get it on https://t.me/getmyid_bot
 	Config["TG_BOT_TOKEN"] = "" // your bot token, get it on https://t.me/BotFather
-	Config["TOKEN"] = ""        // api auth token, you can set it as anything
+	Config["TOKEN"] = "supersecretpassword"        // api auth token, you can set it as anything
 	Config["TG_API_BOT_BASE_URL"] = fmt.Sprintf("https://api.telegram.org/bot%s/", Config["TG_BOT_TOKEN"])
 }
 
